@@ -1,0 +1,45 @@
+{
+    "name": "yakimka/laravel-notification-channel-voicecombg",
+    "description": "Turbo SMS Notification channel for Laravel 5.3+.",
+    "keywords": ["laravel", "notifications", "voicecombg"],
+    "homepage": "https://github.com/yakimka/laravel-notification-channel-voicecombg",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yakimka",
+            "email": "ss.yakim@gmail.com",
+            "role": "Developer",
+            "homepage": "https://github.com/yakimka"
+        },
+        {
+            "name": "JhaoDa",
+            "role": "Developer",
+            "email": "jhaoda@gmail.com",
+            "homepage": "https://github.com/jhaoda"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/notifications": "^5.3",
+        "illuminate/support": "^5.1|^5.2|^5.3",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\VoiceComBG\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\VoiceComBG\\VoiceComBGServiceProvider"
+            ]
+        }
+    }
+}
