@@ -58,19 +58,7 @@ class CouldNotSendNotification extends Exception
     }
 
     /**
-     * Thrown when autch credentials incorrect.
-     *
-     * @return static
-     */
-    public static function incorrectCredentialsVoiceComBG()
-    {
-        return new static(
-          'Notification was not sent. Failed login to VoiceComBG.'
-        );
-    }
-
-    /**
-     * Thrown when ballance less than 1 credit.
+     * Thrown when balance less than 1 credit.
      *
      * @return static
      */

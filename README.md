@@ -1,4 +1,4 @@
-# Turbo SMS notifications channel for Laravel 5.3+
+# VoiceCom BG notifications channel for Laravel 5.3+
 Based on [github.com/laravel-notification-channels/smsc-ru](https://github.com/laravel-notification-channels/smsc-ru)
 
 This package made for send notifications using [voicecombg.bg](https://voicecombg.bg/) with Laravel 5.3+.
@@ -11,7 +11,6 @@ This package made for send notifications using [voicecombg.bg](https://voicecomb
     - [Available Message methods](#available-message-methods)
 - [Changelog](#changelog)
 - [Security](#security)
-- [Contributing](#contributing)
 - [Credits](#credits)
 - [License](#license)
 
@@ -38,10 +37,8 @@ Add your VoiceComBG login, secret key (hashed password) and default sender name 
 // config/services.php
 ...
 'voicecombg' => [
-    'login' => env('VOICECOMBG_LOGIN'),
-    'secret' => env('VOICECOMBG_SECRET'),
-    'sender' => 'John Doe',
-    'url' => 'http://voicecombg.in.ua/api/wsdl.html',
+    'sid' => env('VOICECOMBG_SID'),
+    'url' => 'https://bsms.voicecom.bg/smsapi/bsms/sendsms/',
 ],
 ...
 ```
@@ -87,10 +84,6 @@ public function routeNotificationForVoiceComBG()
 ## Security
 
 If you discover any security related issues, please email ss.yakim@gmail.com instead of using the issue tracker.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 

@@ -3,9 +3,9 @@
 namespace NotificationChannels\VoiceComBG;
 
 use DomainException;
-use NotificationChannels\VoiceComBG\Exceptions\CouldNotSendNotification;
-use Illuminate\Support\Facades\Log;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
+use NotificationChannels\VoiceComBG\Exceptions\CouldNotSendNotification;
 
 class VoiceComBGApi
 {

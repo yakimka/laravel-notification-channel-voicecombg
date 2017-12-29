@@ -19,7 +19,7 @@ class VoiceComBGChannel
     /**
      * Send the given notification.
      *
-     * @param mixed                                  $notifiable
+     * @param mixed $notifiable
      * @param \Illuminate\Notifications\Notification $notification
      *
      * @throws \NotificationChannels\VoiceComBG\Exceptions\CouldNotSendNotification
@@ -38,6 +38,12 @@ class VoiceComBGChannel
         $this->sendMessage($to, $message);
     }
 
+    /**
+     * @param                                                    $recipient
+     * @param \NotificationChannels\VoiceComBG\VoiceComBGMessage $message
+     *
+     * @throws \NotificationChannels\VoiceComBG\Exceptions\CouldNotSendNotification
+     */
     protected function sendMessage($recipient, VoiceComBGMessage $message)
     {
         if (mb_strlen($message->content) > 800) {
