@@ -76,8 +76,10 @@ class CouldNotSendNotification extends Exception
      */
     public function render($request)
     {
-        return response()->json($this->getMessage(), 500,
-          ['Content-type' => 'application/json; charset=utf-8'],
-          JSON_UNESCAPED_UNICODE);
+        if ($request->ajax()) {
+            return response()->json($this->getMessage(), 500,
+              ['Content-type' => 'application/json; charset=utf-8'],
+              JSON_UNESCAPED_UNICODE);
+        }
     }
 }
